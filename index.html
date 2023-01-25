@@ -1,0 +1,54 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .image {
+        width: 80vw;
+        height: 70vh;
+        margin: auto;
+      }
+      .image img {
+        width: 99.9%;
+        animation: drop 1.9s ease;
+        border-radius: 30px;
+      }
+      #rohit {
+        width: 70%;
+        margin: 30px auto;
+        display: block;
+        border: 2px solid black;
+        height: 30px;
+        border-radius: 40px;
+        background-color: skyblue;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      @keyframes drop{
+        0%{
+            opacity: 0;
+            transform: translateY(-80px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="image">
+      <img id="image_change" src="image/IMG_20230125_101302.jpg" alt="rohit" />
+      <div class="btn">
+        <button id="rohit" onclick="myFnction()">click hear</button>
+      </div>
+    </div>
+    <script>
+      function myFnction() {
+        document.getElementById("image_change").src = "image/gorilla.jpg";
+      }
+    </script>
+  </body>
+</html>
